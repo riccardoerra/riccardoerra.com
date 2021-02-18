@@ -1,0 +1,20 @@
+{
+  "title": "Riccardo Erra",
+  "url": "https://riccardoerra.com/",
+  "description": "Riccardo Erra's website",
+  "feed": {
+    "subtitle": "Riccardo Erra's website",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://riccardoerra.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://riccardoerra.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Riccardo Erra",
+    "email": "riccardo@riccardoerra.com",
+    "url": "https://riccardoerra.com/about-me/"
+  }
+}

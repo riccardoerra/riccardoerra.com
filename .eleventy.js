@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addLayoutAlias("layouts/post.njk");
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
@@ -85,7 +85,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function(err, browserSync) {
-        const content_404 = fs.readFileSync('_site/404.html');
+        const content_404 = fs.readFileSync('build/404.html');
 
         browserSync.addMiddleware("*", (req, res) => {
           // Provides the 404 content without redirect.
@@ -103,7 +103,8 @@ module.exports = function(eleventyConfig) {
       "md",
       "njk",
       "html",
-      "liquid"
+      "liquid",
+      "11ty.js"
     ],
 
     // If your site lives in a different subdirectory, change this.
@@ -123,9 +124,9 @@ module.exports = function(eleventyConfig) {
     // These are all optional, defaults are shown:
     dir: {
       input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "_site"
+      includes: "src/components",
+      data: "src/data",
+      output: "build"
     }
   };
 };
